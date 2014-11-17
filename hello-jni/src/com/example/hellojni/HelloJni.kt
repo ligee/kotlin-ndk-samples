@@ -13,35 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.hellojni;
+package com.example.hellojni
 
-import android.app.Activity;
-import android.widget.TextView;
-import android.os.Bundle;
+import android.app.Activity
+import android.widget.TextView
+import android.os.Bundle
 
 
-public class HelloJni extends Activity
-{
+public class HelloJni : Activity() {
     /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
         /* Create a TextView and set its content.
          * the text is retrieved by calling a native
          * function.
          */
-        TextView  tv = new TextView(this);
-        tv.setText( stringFromJNI() );
-        setContentView(tv);
+        val tv = TextView(this)
+        tv.setText(stringFromJNI())
+        setContentView(tv)
     }
 
     /* A native method that is implemented by the
      * 'hello-jni' native library, which is packaged
      * with this application.
      */
-    public native String  stringFromJNI();
+    native fun stringFromJNI(): String = null!!
 
     /* This is another native method declaration that is *not*
      * implemented by 'hello-jni'. This is simply to show that
@@ -53,14 +50,17 @@ public class HelloJni extends Activity
      * Trying to call this function will result in a
      * java.lang.UnsatisfiedLinkError exception !
      */
-    public native String  unimplementedStringFromJNI();
+    native fun unimplementedStringFromJNI(): String = null!!
 
-    /* this is used to load the 'hello-jni' library on application
+    class object {
+
+        /* this is used to load the 'hello-jni' library on application
      * startup. The library has already been unpacked into
      * /data/data/com.example.hellojni/lib/libhello-jni.so at
      * installation time by the package manager.
      */
-    static {
-        System.loadLibrary("hello-jni");
+        {
+            System.loadLibrary("hello-jni")
+        }
     }
 }
