@@ -11,6 +11,10 @@ This repository contains samples from Android NDK partially ported to Kotlin.
 List of ported samples:
 -----------------------
 
+hello-jni
+hello-neon
+two-libs
+
 List of not ported samples:
 ---------------------------
 
@@ -20,17 +24,11 @@ Teapot
 bitmap-plasma
 gles3jni
 hello-gl2
-hello-jni
-hello-neon
-less
 module-exports
 native-activity
 native-audio
 native-codec
 native-media
 native-plasma
-out
 san-angeles
-test-libstdc++
-two-libs
 
