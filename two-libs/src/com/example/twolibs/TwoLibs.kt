@@ -13,34 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.twolibs;
+package com.example.twolibs
 
-import android.app.Activity;
-import android.widget.TextView;
-import android.os.Bundle;
+import android.app.Activity
+import android.widget.TextView
+import android.os.Bundle
 
-public class TwoLibs extends Activity
-{
+public class TwoLibs : Activity() {
     /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-        TextView  tv = new TextView(this);
-        int       x  = 1000;
-        int       y  = 42;
+        val tv = TextView(this)
+        val x = 1000
+        val y = 42
 
         // here, we dynamically load the library at runtime
         // before calling the native method.
         //
-        System.loadLibrary("twolib-second");
+        System.loadLibrary("twolib-second")
 
-        int  z = add(x, y);
+        val z = add(x, y)
 
-        tv.setText( "The sum of " + x + " and " + y + " is " + z );
-        setContentView(tv);
+        tv.setText("The sum of " + x + " and " + y + " is " + z)
+        setContentView(tv)
     }
 
-    public native int add(int  x, int  y);
+    native fun add(x: Int, y: Int): Int = null!!
 }
