@@ -11,29 +11,33 @@ Notes:
 - **Warning!** *uses custom kotlin compiler extension that supports "native" annotation*
 
 
-List of working ported samples:
--------------------------------
+Working ported samples:
+-----------------------
 
 - hello-jni
 - hello-neon
 - two-libs
 - Teapot
 - MoreTeapots
-
-List of not working ported samples:
------------------------------------
-
-List of not ported samples:
----------------------------
-
 - HelloComputeNDK
 - bitmap-plasma
+
+Native-only samples, no porting needed:
+---------------------------------------
+
+- native-plasma
+- native-activity
+
+Not working ported samples:
+---------------------------
+
+Samples not ported yet:
+-----------------------
+
 - gles3jni
 - hello-gl2
-- native-activity
 - native-audio
 - native-codec
 - native-media
-- native-plasma
 - san-angeles
 
