@@ -21,6 +21,11 @@ Working ported samples:
 - MoreTeapots
 - HelloComputeNDK
 - bitmap-plasma
+- gles3jni
+- hello-gl2
+- native-audio
+- native-codec
+- native-media
 
 Native-only samples, no porting needed:
 ---------------------------------------
@@ -34,10 +39,5 @@ Not working ported samples:
 Samples not ported yet:
 -----------------------
 
-- gles3jni
-- hello-gl2
-- native-audio
-- native-codec
-- native-media
 - san-angeles
 
