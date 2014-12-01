@@ -14,17 +14,21 @@
  * limitations under the License.
  */
 
-package com.android.gles3jni;
+package com.android.gles3jni
+
+import kotlin.platform.platformStatic
 
 // Wrapper for native library
 
 public class GLES3JNILib {
+    class object {
 
-     static {
-         System.loadLibrary("gles3jni");
-     }
+        {
+            System.loadLibrary("gles3jni")
+        }
 
-     public static native void init();
-     public static native void resize(int width, int height);
-     public static native void step();
+        public platformStatic native fun init(): Unit = null!!
+        public platformStatic native fun resize(width: Int, height: Int): Unit = null!!
+        public platformStatic native fun step(): Unit = null!!
+    }
 }
