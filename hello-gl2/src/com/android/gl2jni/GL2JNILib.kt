@@ -20,16 +20,19 @@ import kotlin.platform.platformStatic
 
 // Wrapper for native library
 
-public object GL2JNILib {
-    {
-        System.loadLibrary("gl2jni")
+public class GL2JNILib {
+    class object {
+
+        {
+            System.loadLibrary("gl2jni")
+        }
+
+        /**
+         * @param width the current view width
+         * @param height the current view height
+         */
+        public native platformStatic fun init(width: Int, height: Int): Unit = null!!
+
+        public native platformStatic fun step(): Unit = null!!
     }
-
-    /**
-     * @param width the current view width
-     * @param height the current view height
-     */
-    public native platformStatic fun init(width: Int, height: Int): Unit = null!!
-
-    public native platformStatic fun step(): Unit = null!!
 }
