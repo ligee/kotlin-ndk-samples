@@ -9,7 +9,7 @@ Notes:
 ------
 
 - **Warning!** *uses custom kotlin compiler extension that supports "native" annotation*
-
+- to run the samples, use instructions provided with the NDK, but use the Kotlin compiler
 
 Working ported samples:
 -----------------------
@@ -26,18 +26,11 @@ Working ported samples:
 - native-audio
 - native-codec
 - native-media
+- san-angeles
 
 Native-only samples, no porting needed:
 ---------------------------------------
 
 - native-plasma
 - native-activity
-
-Not working ported samples:
----------------------------
-
-Samples not ported yet:
------------------------
-
-- san-angeles
 
