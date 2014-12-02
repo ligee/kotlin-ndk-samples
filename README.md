@@ -3,7 +3,7 @@ kotlin-ndk-samples
 
 Android NDK samples ported to Kotlin
 
-This repository contains samples from Android NDK partially ported to Kotlin.
+This repository contains samples from Android NDK ported to Kotlin.
 
 Notes:
 ------
@@ -33,4 +33,5 @@ Native-only samples, no porting needed:
 
 - native-plasma
 - native-activity
+- module-exports
 
