@@ -39,5 +39,5 @@ public class TwoLibs : Activity() {
         setContentView(tv)
     }
 
-    native fun add(x: Int, y: Int): Int = null!!
+    native fun add(x: Int, y: Int): Int
 }

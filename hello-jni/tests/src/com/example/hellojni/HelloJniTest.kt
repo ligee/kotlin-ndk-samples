@@ -1,6 +1,6 @@
-package com.example.hellojni;
+package com.example.hellojni
 
-import android.test.ActivityInstrumentationTestCase;
+import android.test.ActivityInstrumentationTestCase
 
 /**
  * This is a simple framework for a test of an Application.  See
@@ -12,10 +12,5 @@ import android.test.ActivityInstrumentationTestCase;
  * -e class com.example.hellojni.HelloJniTest \
  * com.example.hellojni.tests/android.test.InstrumentationTestRunner
  */
-public class HelloJniTest extends ActivityInstrumentationTestCase<HelloJni> {
+//public class HelloJniTest : ActivityInstrumentationTestCase<HelloJni>("com.example.hellojni", javaClass<HelloJni>())
 
-    public HelloJniTest() {
-        super("com.example.hellojni", HelloJni.class);
-    }
-
-}

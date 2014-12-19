@@ -26,7 +26,7 @@ public class HelloComputeNDK : Activity() {
     private var mBitmapIn: Bitmap? = null
     private var mBitmapOut: Bitmap? = null
 
-    native fun nativeMono(cacheDir: String, X: Int, Y: Int, `in`: Bitmap, out: Bitmap): Unit = null!!
+    native fun nativeMono(cacheDir: String, X: Int, Y: Int, `in`: Bitmap, out: Bitmap): Unit
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

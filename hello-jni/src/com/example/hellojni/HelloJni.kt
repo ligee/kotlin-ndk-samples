@@ -38,7 +38,7 @@ public class HelloJni : Activity() {
      * 'hello-jni' native library, which is packaged
      * with this application.
      */
-    native fun stringFromJNI(): String = null!!
+    native fun stringFromJNI(): String
 
     /* This is another native method declaration that is *not*
      * implemented by 'hello-jni'. This is simply to show that
@@ -50,7 +50,7 @@ public class HelloJni : Activity() {
      * Trying to call this function will result in a
      * java.lang.UnsatisfiedLinkError exception !
      */
-    native fun unimplementedStringFromJNI(): String = null!!
+    native fun unimplementedStringFromJNI(): String
 
     class object {
 

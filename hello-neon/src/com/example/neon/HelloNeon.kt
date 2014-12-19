@@ -21,7 +21,7 @@ public class HelloNeon : Activity() {
      * 'helloneon' native library, which is packaged
      * with this application.
      */
-    native fun stringFromJNI(): String = null!!
+    native fun stringFromJNI(): String
 
     class object {
 

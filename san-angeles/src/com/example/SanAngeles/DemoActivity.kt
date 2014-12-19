@@ -106,9 +106,9 @@ class DemoGLSurfaceView(context: Context) : GLSurfaceView(context) {
 
     class object {
 
-        native platformStatic fun nativePause(): Unit = null!!
-        native platformStatic fun nativeResume(): Unit = null!!
-        native platformStatic fun nativeTogglePauseResume(): Unit = null!!
+        native platformStatic fun nativePause(): Unit
+        native platformStatic fun nativeResume(): Unit
+        native platformStatic fun nativeTogglePauseResume(): Unit
     }
 }
 
@@ -128,9 +128,9 @@ class DemoRenderer : GLSurfaceView.Renderer {
 
     class object {
 
-        native platformStatic fun nativeInit(): Unit = null!!
-        native platformStatic fun nativeResize(w: Int, h: Int): Unit = null!!
-        native platformStatic fun nativeRender(): Unit = null!!
-        native platformStatic fun nativeDone(): Unit = null!!
+        native platformStatic fun nativeInit(): Unit
+        native platformStatic fun nativeResize(w: Int, h: Int): Unit
+        native platformStatic fun nativeRender(): Unit
+        native platformStatic fun nativeDone(): Unit
     }
 }

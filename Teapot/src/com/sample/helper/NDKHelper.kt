@@ -62,7 +62,7 @@ public class NDKHelper {
     }
 
     public fun loadTexture(path: String): Boolean {
-        var bitmap: Bitmap? = null
+        var bitmap: Bitmap?
         try {
             var str = path
             if (!path.startsWith("/")) {

@@ -273,19 +273,19 @@ public class NativeCodec : Activity() {
     class object {
         val TAG = "NativeCodec"
 
-        /** Native methods, implemented in jni folder */
-        public native platformStatic fun createEngine(): Unit = null!!
-
-        public native platformStatic fun createStreamingMediaPlayer(filename: String): Boolean = null!!
-        public native platformStatic fun setPlayingStreamingMediaPlayer(isPlaying: Boolean): Unit = null!!
-        public native platformStatic fun shutdown(): Unit = null!!
-        public native platformStatic fun setSurface(surface: Surface): Unit = null!!
-        public native platformStatic fun rewindStreamingMediaPlayer(): Unit = null!!
-
-                /** Load jni .so on initialization */
+        /** Load jni .so on initialization */
         {
             System.loadLibrary("native-codec-jni")
         }
+
+        /** Native methods, implemented in jni folder */
+        public native platformStatic fun createEngine(): Unit
+
+        public native platformStatic fun createStreamingMediaPlayer(filename: String): Boolean
+        public native platformStatic fun setPlayingStreamingMediaPlayer(isPlaying: Boolean): Unit
+        public native platformStatic fun shutdown(): Unit
+        public native platformStatic fun setSurface(surface: Surface): Unit
+        public native platformStatic fun rewindStreamingMediaPlayer(): Unit
     }
 
 }

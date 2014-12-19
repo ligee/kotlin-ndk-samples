@@ -284,34 +284,34 @@ public class NativeAudio : Activity() {
 
         var numChannelsUri = 0
 
-        /** Native methods, implemented in jni folder */
-        public platformStatic native fun createEngine(): Unit = null!!
-
-        public platformStatic native fun createBufferQueueAudioPlayer(): Unit = null!!
-        public platformStatic native fun createAssetAudioPlayer(assetManager: AssetManager, filename: String): Boolean = null!!
-        // true == PLAYING, false == PAUSED = null!!
-        public platformStatic native fun setPlayingAssetAudioPlayer(isPlaying: Boolean): Unit = null!!
-
-        public platformStatic native fun createUriAudioPlayer(uri: String): Boolean = null!!
-        public platformStatic native fun setPlayingUriAudioPlayer(isPlaying: Boolean): Unit = null!!
-        public platformStatic native fun setLoopingUriAudioPlayer(isLooping: Boolean): Unit = null!!
-        public platformStatic native fun setChannelMuteUriAudioPlayer(chan: Int, mute: Boolean): Unit = null!!
-        public platformStatic native fun setChannelSoloUriAudioPlayer(chan: Int, solo: Boolean): Unit = null!!
-        public platformStatic native fun getNumChannelsUriAudioPlayer(): Int = null!!
-        public platformStatic native fun setVolumeUriAudioPlayer(millibel: Int): Unit = null!!
-        public platformStatic native fun setMuteUriAudioPlayer(mute: Boolean): Unit = null!!
-        public platformStatic native fun enableStereoPositionUriAudioPlayer(enable: Boolean): Unit = null!!
-        public platformStatic native fun setStereoPositionUriAudioPlayer(permille: Int): Unit = null!!
-        public platformStatic native fun selectClip(which: Int, count: Int): Boolean = null!!
-        public platformStatic native fun enableReverb(enabled: Boolean): Boolean = null!!
-        public platformStatic native fun createAudioRecorder(): Boolean = null!!
-        public platformStatic native fun startRecording(): Unit = null!!
-        public platformStatic native fun shutdown(): Unit = null!!
-
-                /** Load jni .so on initialization */
+        /** Load jni .so on initialization */
         {
             System.loadLibrary("native-audio-jni")
         }
+
+        /** Native methods, implemented in jni folder */
+        public platformStatic native fun createEngine(): Unit
+
+        public platformStatic native fun createBufferQueueAudioPlayer(): Unit
+        public platformStatic native fun createAssetAudioPlayer(assetManager: AssetManager, filename: String): Boolean
+        // true == PLAYING, false == PAUSED
+        public platformStatic native fun setPlayingAssetAudioPlayer(isPlaying: Boolean): Unit
+
+        public platformStatic native fun createUriAudioPlayer(uri: String): Boolean
+        public platformStatic native fun setPlayingUriAudioPlayer(isPlaying: Boolean): Unit
+        public platformStatic native fun setLoopingUriAudioPlayer(isLooping: Boolean): Unit
+        public platformStatic native fun setChannelMuteUriAudioPlayer(chan: Int, mute: Boolean): Unit
+        public platformStatic native fun setChannelSoloUriAudioPlayer(chan: Int, solo: Boolean): Unit
+        public platformStatic native fun getNumChannelsUriAudioPlayer(): Int
+        public platformStatic native fun setVolumeUriAudioPlayer(millibel: Int): Unit
+        public platformStatic native fun setMuteUriAudioPlayer(mute: Boolean): Unit
+        public platformStatic native fun enableStereoPositionUriAudioPlayer(enable: Boolean): Unit
+        public platformStatic native fun setStereoPositionUriAudioPlayer(permille: Int): Unit
+        public platformStatic native fun selectClip(which: Int, count: Int): Boolean
+        public platformStatic native fun enableReverb(enabled: Boolean): Boolean
+        public platformStatic native fun createAudioRecorder(): Boolean
+        public platformStatic native fun startRecording(): Unit
+        public platformStatic native fun shutdown(): Unit
     }
 
 }

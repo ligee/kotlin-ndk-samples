@@ -27,8 +27,8 @@ public class GLES3JNILib {
             System.loadLibrary("gles3jni")
         }
 
-        public platformStatic native fun init(): Unit = null!!
-        public platformStatic native fun resize(width: Int, height: Int): Unit = null!!
-        public platformStatic native fun step(): Unit = null!!
+        public platformStatic native fun init(): Unit
+        public platformStatic native fun resize(width: Int, height: Int): Unit
+        public platformStatic native fun step(): Unit
     }
 }

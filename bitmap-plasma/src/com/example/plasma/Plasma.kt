@@ -46,7 +46,7 @@ class PlasmaView(context: Context, width: Int, height: Int) : View(context) {
     private var mStartTime: Long = 0
 
     /* implementend by libplasma.so */
-    private native fun renderPlasma(bitmap: Bitmap, time_ms: Long): Unit = null!!
+    private native fun renderPlasma(bitmap: Bitmap, time_ms: Long): Unit;
 
     {
         mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565)

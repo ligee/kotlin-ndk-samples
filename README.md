@@ -8,7 +8,7 @@ This repository contains samples from Android NDK ported to Kotlin.
 Notes:
 ------
 
-- **Warning!** *uses custom kotlin compiler extension that supports "native" annotation*
+- **Warning!** *Kotlin M10 or later is required*
 - to run the samples, use instructions provided with the NDK, but use the Kotlin compiler
 
 Working ported samples:
